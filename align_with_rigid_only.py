@@ -16,7 +16,7 @@ start_time = time.time()
 file_list_path = 'file_list.txt'
 with open(file_list_path, 'w') as f_list:
     # loop to read data files
-    dir_path = r'C:\Users\xinglim\PycharmProjects\pythonProject\use_segmentations'
+    dir_path = r'path\to\segmentation\folder'
     filenames = []
     for path in os.listdir(dir_path):
         if os.path.isfile(os.path.join(dir_path, path)):
@@ -25,7 +25,7 @@ with open(file_list_path, 'w') as f_list:
     x = len(filenames)
 
 # load reference point cloud
-pcd_file = r'C:\Users\xinglim\PycharmProjects\pythonProject\use_segmentations\p20130928_um16.ply'
+pcd_file = r'path\to\segmentation'
 reference = o3.io.read_point_cloud(pcd_file)
 reference.remove_non_finite_points()
 
@@ -86,7 +86,7 @@ for i in range(x):
 # concatenate all aligned point clouds into a single array
 aligned_instances_array = np.stack([np.asarray(pc) for pc in aligned_instances])
 print('elapsed_time=', time.time() - start_time)
-np.save("", aligned_instances_array)
+np.save("file_name", aligned_instances_array)
 
 
 
