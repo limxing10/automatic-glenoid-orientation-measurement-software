@@ -9,14 +9,14 @@ import visualisation_utils
 
 # Read point cloud for scapula
 # Load and preprocess point cloud data for scapula
-pcd_file = r"C:\Users\xinglim\PycharmProjects\pythonProject\use_segmentations\p20190114_um01.ply"
+pcd_file = r"path\to\segmentation"
 scapula_pc = o3.io.read_point_cloud(pcd_file)
 scapula_pc.remove_non_finite_points()
 scapula_array = np.asarray(scapula_pc.points)
 
 # Read point cloud for surface
 # Load and preprocess point cloud data for surface
-pcd_file = r"C:\Users\xinglim\Documents\auto\p20190114_um01_surface.ply"
+pcd_file = r"path\to\surface"
 surface_pc = o3.io.read_point_cloud(pcd_file)
 surface_pc.remove_non_finite_points()
 surface_array = np.asarray(surface_pc.points)
@@ -28,7 +28,7 @@ surface_vtk.Update()
 
 # Read point cloud for slicer edge
 # Load and preprocess point cloud data for slicer edge
-pcd_file = r"C:\Users\xinglim\Documents\auto\p20190114_um01_edge.ply"
+pcd_file = r"\path\to\edge"
 slicer_edge_pc = o3.io.read_point_cloud(pcd_file)
 slicer_edge_pc.remove_non_finite_points()
 slicer_edge_array = np.asarray(slicer_edge_pc.points)
