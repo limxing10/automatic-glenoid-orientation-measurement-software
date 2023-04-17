@@ -176,8 +176,6 @@ mode = 0
 stand_dev = np.sqrt(ssm_obj.pca_object.explained_variance_ratio_[mode])
 stans_dev_to_plot = 5*stand_dev
 
-print(f"To obtain {ssm_obj.desired_variance * 100}% variance, {ssm_obj.required_mode_number} modes are required")
-plot_cumulative_variance_plt(np.cumsum(ssm_obj.pca_object.explained_variance_ratio_), 0.9)
 print(f"explained variance is {ssm_obj.pca_object.explained_variance_ratio_[mode]}")
 plot_cumulative_variance_seaborn(np.cumsum(ssm_obj.pca_object.explained_variance_ratio_), 0.9)
 
