@@ -1,6 +1,12 @@
 
 """
 
+This is was copied from SciKit-Surgery - glenoidplanefitting
+
+A. Olafsdottir, D. Butt, A. Majed, M. Falworth , M. J. Clarkson, S. A. Thompson. 
+'SciKit-SurgeryGlenoid, an open source toolkit for glenoid version measurement' 
+Medical Imaging 2022: Image-Guided Procedures, Robotic Interventions, and Modeling (2022) 12034, 399-406). SPIE.
+
 This is an implementation of a two plane method, see
 
 A. Ganapathi, J. McCarron, Chen, J. Iannotti.
